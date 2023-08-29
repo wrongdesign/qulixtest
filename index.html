@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Qulix System</title>
+</head>
+
+<body>
+    <a name="regForm" style="height: 0px;"></a>
+    <div class="bannerbg">
+        <header>
+            <img src="images/Logo.png" alt="Logo" id="logo">
+            <div class="menu">
+                <a href="#targetAudience" id="targetAudienceA">Target audience</a>
+                <a href="#summary" id="summaryA">Summary</a>
+                <a href="#speaker" id="speakerA">Speaker</a>
+            </div>
+            <div class="burgerMenu" id="burgerButton" onclick="showMenu()">
+                <span id="line1"></span>
+                <span id="line2"></span>
+                <span id="line3"></span>
+            </div>
+        </header>
+        <div class="burgerMenuFrame" id="burgerMenuFrameId">
+            <div class="menuHeader">
+                <img src="images/LogoBlack.png" alt="logoBlack" id="logoBlack">
+                <img src="images/closeCross.png" alt="close button" onclick="closeMenu()" id="closeCross">
+            </div>
+            <div class="menuList">
+                <a href="#targetAudience" onclick="closeMenu()">Target audience</a>
+                <div id="separator"></div>
+                <a href="#summary" onclick="closeMenu()">Summary</a>
+                <div id="separator"></div>
+                <a href="#speaker" onclick="closeMenu()">Speaker</a>
+            </div>
+        </div>
+        <div class="banner">
+            <p id="title">Free webinar</p>
+            <h1 id="tag">How to launch a neobank in 6 months?</h1>
+            <div class="registerForm">
+                <p id="regFormText">Register for the webinar now! Please fill out all fields</p>
+                <div class="formBg">
+                    <form id="registerFormId" name="registerFormId">
+                        <input type="text" id="name" placeholder="First name*" required>
+                        <input type="text" id="lastName" placeholder="Last name*" required>
+                        <input type="text" id="compName" placeholder="Company name*" required>
+                        <input type="email" id="email" placeholder="Email*" required>
+                    </form>
+                </div>
+                <button type="submit" form="registerFormId" onclick="checkData()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <a name="targetAudience" style="height: 0px;"></a>
+    <div class="targetAudience">
+        <h2 id="targetTag">The webinar is best for</h2>
+        <div class="cases">
+            <div class="case">
+                <img src="images/startup.png" alt="start-up">
+                <p style="-webkit-text-stroke: 1px black;">Fintech startups, banks, and financial organizations planning
+                    to launch digital banking</p>
+            </div>
+            <div class="case">
+                <img src="images/business.png" alt="business">
+                <p style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); -webkit-text-stroke: 1px black;">Businesses that
+                    are already developing a project, but would like to improve the process</p>
+            </div>
+            <div class="case">
+                <img src="images/investor.png" alt="investor">
+                <p>Investors who want to invest in a project, but don't understand its real cost</p>
+            </div>
+        </div>
+        <button onclick="location.href='#regForm';">Register</button>
+    </div>
+
+    <a name="summary" style="height: 0px;"></a>
+    <a name="speaker" style="height: 0px;"></a>
+    <div class="speaker">
+        <p id="speakerTag">Speaker</p>
+        <img src="images/speaker.png" alt="speaker">
+        <div class="speakerInfo">
+            <h2>Alexander Arabey</h2>
+            <p id="jobTitle">Director of Business Development, Qulix Systems</p>
+            <p id="details">Alexander has more than 20 years' experience in the field of digital banking and fintech. He is ready to
+                share his expertise and give you valuable advice during this webinar.</p>
+            <button onclick="location.href='#regForm';">Register now</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
